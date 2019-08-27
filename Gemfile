@@ -52,3 +52,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Gems for imagem management
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+gem 'figaro' #last version from April 2015!
+gem 'unf' #last version from April 2015!
