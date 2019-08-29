@@ -12,6 +12,12 @@
     </tr>
   </thead>
 
+  <%= cl_image_tag("fvzlt6f6234tium9uyp6",
+      width: 400, height: 300, crop: :fill) %>
+
+  <%= cl_image_tag("ildd7q8u3m44djcygswx",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
   <tbody>
     <% @posts.each do |post| %>
       <tr>
