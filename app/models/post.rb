@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :title, :image, presence: true
+  validates :title, presence: true
+  has_many :photos, dependent: :destroy
 
-  mount_uploader :image, PhotoUploader
 end
