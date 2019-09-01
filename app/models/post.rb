@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
   validates :title, presence: true
-  has_many :photos, dependent: :destroy
-
+  has_many :post_photos, dependent: :destroy
 end
