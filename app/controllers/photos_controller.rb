@@ -1,5 +1,9 @@
 class PhotosController < ApplicationController
 
+  def show
+
+  end
+
   def new
     @photo = Photo.new
     @post = Post.find(params[:post_id])
