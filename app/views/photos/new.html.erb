@@ -1,11 +1,15 @@
 <h1>Add Photos to <%= @post.title %></h1>
 
-<% simple_form_for [@post, @picture] do |f| %>
+<%= simple_form_for [@post, @photo] do |f| %>
 
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :cloud_id %>
+  <%= f.input :cloud_id_cache, as: :hidden %>
 
   <%= f.submit "add photo" %>
 <% end %>
+
+
+
+
 
 <%= link_to 'Back', post_path(@post) %>
