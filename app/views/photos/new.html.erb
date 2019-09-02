@@ -2,7 +2,7 @@
 
 <%= simple_form_for [@post, @photo] do |f| %>
 
-  <%= f.input :cloud_id %>
+  <%= f.input :cloud_id, multiple: true %>
   <%= f.input :cloud_id_cache, as: :hidden %>
 
   <%= f.submit "add photo" %>
