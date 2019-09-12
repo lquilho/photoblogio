@@ -2,12 +2,14 @@
 
 <p>
   <strong><%= @post.title %></strong>
+  <%= @post.id %>
 </p>
 
 <p>
   <% @photos.each do |photo|  %>
 
-    <%= link_to cl_image_tag(photo.cloud_id, height: 300), "#" %>
+    <%= link_to cl_image_tag(photo.cloud_id, height: 300), post_photo_path(@post, photo) %>
+    <%= link_to 'Delete', post_photo_path(@post, photo), method: :delete %> |
   <% end %>
 </p>
 
