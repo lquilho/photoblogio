@@ -2,10 +2,11 @@
 
 <%= simple_form_for [@post, @photo] do |f| %>
 
-  <%= f.label :cloud_id, "choose multiple photos" %>
-  <%= f.file_field :cloud_id, multiple: true %>
+  <%= f.label :photo, "choose multiple photos" %>
+  <%= f.file_field :cloud_id, multiple: true, name: "photos[]" %>
 
   <%= f.button :submit, "add photos" %>
+
 <% end %>
 <br>
 

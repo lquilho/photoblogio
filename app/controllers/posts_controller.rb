@@ -51,6 +51,12 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+        if params[:photos]
+          params[:photos].each do | photo |
+            @post.photos.create(cloud_id: photo)
+          end
+        end
+
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
