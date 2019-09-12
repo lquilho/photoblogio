@@ -2,14 +2,11 @@
 
 <%= simple_form_for [@post, @photo] do |f| %>
 
-  <%= f.input :cloud_id, multiple: true %>
-  <%= f.input :cloud_id_cache, as: :hidden %>
+  <%= f.label :cloud_id, "choose multiple photos" %>
+  <%= f.file_field :cloud_id, multiple: true %>
 
-  <%= f.submit "add photo" %>
+  <%= f.button :submit, "add photos" %>
 <% end %>
-
-
-
-
+<br>
 
 <%= link_to 'Back', post_path(@post) %>

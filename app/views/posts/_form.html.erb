@@ -16,6 +16,13 @@
 
     <%= f.input :description %>
 
+    <%= f.fields_for :photo do |ff| %>
+      <div class="field">
+        <%= ff.label :photo %><br>
+        <%= ff.file_field :cloud_id, multiple: true, name: "photos[]" %>
+      </div>
+    <% end %>
+
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
 

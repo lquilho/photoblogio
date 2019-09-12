@@ -7,7 +7,7 @@
 <p>
   <% @photos.each do |photo|  %>
 
-    <%= link_to cl_image_tag(photo.cloud_id, height: 300), "http://www.mysite.com/" %>
+    <%= link_to cl_image_tag(photo.cloud_id, height: 300), "#" %>
   <% end %>
 </p>
 

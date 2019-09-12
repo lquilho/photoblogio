@@ -10,12 +10,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @photos = Photo.where(post_id: params[:id])
+    @photos = @post.photos.all
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @photos = @post.photos.build
   end
 
   # GET /posts/1/edit
@@ -25,10 +26,17 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+
     @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
+        if params[:photos]
+          params[:photos].each do | photo |
+            @post.photos.create(cloud_id: photo)
+          end
+        end
+
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -70,6 +78,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description)
+      params.require(:post).permit(:title, :description, photos_attributes: [:cloud_id, :post_id])
     end
 end
