@@ -11,7 +11,6 @@
     <%= link_to cl_image_tag(photo.cloud_id, height: 300), post_photo_path(@post, photo) %>
 
     <%= link_to '[X]', post_photo_path(@post, photo), method: :delete, data: { confirm: 'Are you sure?' } %>
-
   <% end %>
 </p>
 
