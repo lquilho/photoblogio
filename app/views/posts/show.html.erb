@@ -2,17 +2,18 @@
 
 <p>
   <strong><%= @post.title %></strong>
-  <%= @post.id %>
 </p>
 
-<p>
-  <% @photos.each do |photo|  %>
+<div class="container">
+  <div class="cards">
+    <% @photos.each do |photo|  %>
+      <div class="card-category">
+          <%= link_to cl_image_tag(photo.cloud_id, height: 300), post_photo_path(@post, photo) %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-    <%= link_to cl_image_tag(photo.cloud_id, height: 300), post_photo_path(@post, photo) %>
-
-    <%= link_to '[X]', post_photo_path(@post, photo), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</p>
 
 
 <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |

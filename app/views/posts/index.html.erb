@@ -1,14 +1,8 @@
 
-<div class="banner">
-  <div class="container">
-    <h1>Luís Quilhó</h1>
-    <p>My photography portfolio</p>
-  </div>
-</div>
 
-<p id="notice"><%= notice %></p>
+<%= render 'shared/banner' %>
 
-
+<div class="container">
   <div class="cards">
     <% @posts.each do |post| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1494859780588-cf6063220793?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=677&q=80)">
@@ -16,8 +10,7 @@
       </div>
     <% end %>
   </div>
-
-
+</div>
 
 <br>
 
