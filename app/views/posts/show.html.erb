@@ -1,17 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong><%= @post.title %></strong>
-</p>
 
 <div class="container">
-  <div class="cards">
-    <% @photos.each do |photo|  %>
-      <div class="card-category">
-          <%= link_to cl_image_tag(photo.cloud_id, height: 300), post_photo_path(@post, photo) %>
-      </div>
-    <% end %>
-  </div>
+  <% @photos.each do |photo|  %>
+        <%= link_to cl_image_tag(photo.cloud_id, height: 250), post_photo_path(@post, photo) %>
+  <% end %>
 </div>
 
 
