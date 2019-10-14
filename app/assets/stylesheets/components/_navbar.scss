@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
+  background-color: rgba(50,50,50,0.4);
   transition: 0.5s;
   a {
     letter-spacing: 2px;
@@ -15,8 +15,9 @@
   flex-grow: 0;
 }
 
-.navbar-brand a {
+.brand {
   font-size: 20px;
+  color: rgba(150,150,150,0.5);
 }
 
 .font-white {
