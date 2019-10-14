@@ -1,11 +1,12 @@
 <%= render 'shared/banner' %>
 
-<div class="container">
+<div class="card-container">
   <div class="cards">
     <% @posts.each do |post| %>
-      <div class="card-category" style="background-image: url(<%= post.photos.first.cloud_id  %>)">
-        <%= link_to post.title, post %>
-      </div>
+      <%= link_to post do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= post.photos.first.cloud_id  %>)"><%= post.title %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
