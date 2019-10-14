@@ -6,10 +6,12 @@
   color: #eee;
   text-align: center;
   padding-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .demo a {
-  position: absolute;
   bottom: 20px;
   left: 50%;
   z-index: 2;
