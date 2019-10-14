@@ -3,7 +3,6 @@
   background-color: transparent;
   transition: 0.5s;
   a {
-    font-size: 12px;
     letter-spacing: 2px;
   }
 }
@@ -16,9 +15,14 @@
   flex-grow: 0;
 }
 
-.navbar-brand h1 {
+.navbar-brand a {
+  font-size: 20px;
 }
 
 .font-white {
   color: white;
+}
+
+.nav-item a {
+  font-size: 12px;
 }
