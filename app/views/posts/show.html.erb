@@ -1,10 +1,18 @@
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @photos.first.cloud_id  %>);">
+
+  <h2>Photography portfolio</h2>
+
+  <!-- scrool down button -->
+  <section id="section04" class="demo">
+    <a href="#section05"><span></span>Scroll</a>
+  </section>
+</div>
 
 <div class="container">
   <% @photos.each do |photo|  %>
         <%= link_to cl_image_tag(photo.cloud_id, height: 250), post_photo_path(@post, photo) %>
   <% end %>
 </div>
-
 
 
 <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |

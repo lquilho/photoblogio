@@ -10,6 +10,9 @@
 
 .navbar-lewagon-white {
   background-color: white;
+  a {
+    color: black !important;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,7 +24,6 @@
   color: rgba(250,250,250,0.7);
   &:hover {
     text-decoration: none;
-
   }
 }
 
@@ -32,3 +34,4 @@
 .nav-item a {
   font-size: 12px;
 }
+
