@@ -10,12 +10,16 @@
 
 
 <div class="card-container">
-  <% @photos.each do |photo|  %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= photo.cloud_id  %>)">
-
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @photos.each do |photo|  %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= photo.cloud_id  %>)">
+        </div>
+    <% end %>
+  </div>
 </div>
+
+
+
 
 
 
