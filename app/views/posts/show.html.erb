@@ -8,11 +8,15 @@
   </section>
 </div>
 
-<div class="container">
+
+<div class="card-container">
   <% @photos.each do |photo|  %>
-        <%= link_to cl_image_tag(photo.cloud_id, height: 250), post_photo_path(@post, photo) %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= photo.cloud_id  %>)">
+
+    </div>
   <% end %>
 </div>
+
 
 
 <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
