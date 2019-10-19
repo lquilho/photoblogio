@@ -12,11 +12,10 @@
 <div class="card-container">
   <div class="cards">
     <% @photos.each do |photo|  %>
-      <%= link_to post_photo_path(@post, photo) do %>
-        <div class="card-category" style="background-image: url(<%= photo.cloud_id  %>)">
+        <div class="card-category">
+          <%= cl_image_tag photo.cloud_id  %>
         </div>
       <% end %>
-    <% end %>
   </div>
 </div>
 

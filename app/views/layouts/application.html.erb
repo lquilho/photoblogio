@@ -10,6 +10,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+     <link href="https://unpkg.com/cloudinary-lightbox@latest/dist/cloudinaryLightbox.css" rel="stylesheet" type="text/css">
+
   </head>
 
   <body>
@@ -21,7 +23,11 @@
     <p class="alert"><%= alert %></p>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
+       <script src="https://unpkg.com/cloudinary-lightbox@latest/dist/cloudinaryLightbox.js"></script>
+      <script>
+      var CloudinaryLightbox = CloudinaryLightbox({
+          cloudName: "dfl36nksv"
+      })
+    </script>
   </body>
 </html>
