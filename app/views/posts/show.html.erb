@@ -13,7 +13,7 @@
   <div class="cards">
     <% @photos.each do |photo|  %>
       <%= link_to post_photo_path(@post, photo) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= photo.cloud_id  %>)">
+        <div class="card-category" style="background-image: url(<%= photo.cloud_id  %>)">
         </div>
       <% end %>
     <% end %>
