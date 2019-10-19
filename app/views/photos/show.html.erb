@@ -1,3 +1,6 @@
 <div class="photo-container">
-  <%= cl_image_tag(@photo.cloud_id, height: 700) %>
+  <%= cl_image_tag(@photo.cloud_id, height: 500) %>
+  <% if user_signed_in? %>
+    <%= link_to 'Delete Photo', post_photo_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>
