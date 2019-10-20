@@ -9,19 +9,17 @@
 </div>
 
 
+
 <div class="card-container">
-  <div class="cards">
+  <div class="cards" >
     <% @photos.each do |photo|  %>
-        <div class="card-category">
-          <%= cl_image_tag photo.cloud_id  %>
-          <% if user_signed_in? %>
-            <%= link_to '[X]', post_photo_path(@post, photo), method: :delete, data: { confirm: 'Are you sure?' } %> |
-          <% end %>
+      <%= link_to cl_image_path(photo.cloud_id), "data-lightbox" => "gallery" do %>
+        <div class="card-category" style="background-image: url(<%= photo.cloud_id  %>)">
         </div>
       <% end %>
+    <% end %>
   </div>
 </div>
-
 
 
 
