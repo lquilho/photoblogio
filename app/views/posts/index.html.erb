@@ -4,11 +4,11 @@
 
   <!-- scrool down button -->
   <section id="section04" class="demo">
-    <a href="#cards"><span></span>Scroll</a>
+    <a href=".card-container" data-scroll ><span></span>Scroll</a>
   </section>
 </div>
 
-<div id="cards" class="card-container">
+<div class="card-container">
   <div class="cards">
     <% @posts.each do |post| %>
       <%= link_to post do %>
