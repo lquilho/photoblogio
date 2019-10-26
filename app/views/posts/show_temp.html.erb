@@ -1,0 +1,32 @@
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @photos.first.cloud_id  %>);">
+
+  <h2><%= @post.title %></h2>
+
+  <!-- scrool down button -->
+  <section id="section04" class="demo">
+    <a href=".card-container" data-scroll><span></span>Scroll</a>
+  </section>
+</div>
+
+
+
+<div class="card-container">
+  <div class="cards" >
+    <% @photos.each do |photo|  %>
+      <%= link_to cl_image_path(photo.cloud_id), "data-lightbox" => "gallery" do %>
+        <div class="card-category" style="background-image: url(<%= photo.cloud_id  %>)">
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+<% if user_signed_in? %>
+  <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %> |
+<% end %>
+
+
