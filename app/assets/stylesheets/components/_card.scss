@@ -4,13 +4,13 @@
 }
 
 .card-container {
-  margin: 80px 80px;
+  margin: 180px 40px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0px;
+  grid-gap: 40px;
   a:hover {
     text-decoration: none;
   }
@@ -19,8 +19,6 @@
   background-size: cover;
   background-position: center;
   height: 350px;
-  height: 350px;
-  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
