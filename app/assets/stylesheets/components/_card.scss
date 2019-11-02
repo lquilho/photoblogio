@@ -1,18 +1,12 @@
-.photo-container {
-  margin-top: 100px;
-  text-align: center;
-}
 
 .card-container {
-  margin: 150px 100px;
-  text-align: center;
-
+  margin: 150px 20px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 16px;
   a:hover {
     text-decoration: none;
   }
